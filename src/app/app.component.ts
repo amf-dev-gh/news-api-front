@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { NewsApiService } from './services/news-api.service';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { CardNewsComponent } from './components/card-news/card-news.component';
+import { CardSpinnerComponent } from './components/card-spinner/card-spinner.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CommonModule, FormsModule, CardNewsComponent, CardSpinnerComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'news-spa';
+
+  private readonly apiService = inject(NewsApiService);
+  readonly news = this.apiService.news;
+  about: string = '';
+
+  getNewsAbout(): void {
+    if(this.about === '' || this.about.length < 3){
+      return;
+    }
+    this.apiService.getNews(this.about);
+    this.about = '';
+  }
 }
