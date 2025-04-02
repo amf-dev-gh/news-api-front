@@ -2,9 +2,10 @@
   <header>
     <nav class="text-amber-100 w-full min-h-20 md:min-h-30 bg-red-950 grid place-content-center">
       <h1 class="text-4xl md:text-5xl">
-        <span class="text-sky-500">F</span>ake
-        <span class="text-sky-500">N</span>ews of the
-        <span class="text-sky-500">D</span>ay
+        <a href="/">
+          <span class="text-sky-500">F</span>ake
+          <span class="text-sky-500">N</span>ews of the
+          <span class="text-sky-500">D</span>ay</a>
       </h1>
       <p class="text-center">(By Spring OpenAI)</p>
     </nav>
@@ -34,13 +35,13 @@
     <!--  Bloque noticias -->
     <section>
       <div class="m-4 grid gap-5 grid-cols-auto md:grid-cols-2 lg:grid-cols-3 transition-all duration-500 opacity-0"
-        [class.opacity-100]="news().length !== 0">
+        [class.opacity-100]="news() && news().length !== 0">
         @for (n of news(); track $index) {
         <app-card-news [news]="n" />
         }
       </div>
 
-      <div class="m-4 grid gap-5 grid-cols-auto md:grid-cols-2 lg:grid-cols-3" [class.hidden]="news().length !== 0">
+      <div class="m-4 grid gap-5 grid-cols-auto md:grid-cols-2 lg:grid-cols-3" [class.hidden]="news() && news().length !== 0">
         <app-card-spinner />
         <app-card-spinner class=" hidden md:inline" />
         <app-card-spinner class="hidden md:inline" />
