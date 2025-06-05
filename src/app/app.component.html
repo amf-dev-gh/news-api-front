@@ -7,7 +7,7 @@
           <span class="text-sky-500">N</span>ews of the
           <span class="text-sky-500">D</span>ay</a>
       </h1>
-      <p class="text-center">(By Spring OpenAI)</p>
+      <p class="text-center">(By OpenAI)</p>
     </nav>
   </header>
 
@@ -16,7 +16,7 @@
     <section>
       <div class="m-4 flex gap-4 items-center justify-center flex-col md:flex-row">
         <label class="text-xl w-auto tracking-wide" for="about">¿Sobre que te gustarían las noticias?</label>
-        <form class="relative w-full md:w-80" (submit)="getNewsAbout()">
+        <form class="relative w-full md:w-80" (ngSubmit)="getNewsAbout()">
           <input class="w-full md:w-80 h-10 border border-gray-200 rounded-3xl py-1 px-4 
       hover:border-gray-400 focus:outline-none focus:border-gray-500 focus:ring-2 focus:ring-gray-200"
             [(ngModel)]="about" type="text" name="about" id="about" placeholder="Buscar noticias..." autocomplete=false>

@@ -17,10 +17,8 @@ export class AppComponent {
   about: string = '';
 
   getNewsAbout(): void {
-    if(this.about === '' || this.about.length < 3){
-      return;
-    }
+    if(this.about === '' || this.about.length < 3) return;
+
     this.apiService.getNews(this.about);
-    this.about = '';
   }
 }
