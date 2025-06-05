@@ -1,20 +1,41 @@
-<h1>&copy;Fake News</h1>
+# 📰 Fake News
+Generador de noticias falsas utilizando OpenAI con una arquitectura full stack moderna.
 
-<h3><em>Diseñado en IDE Eclipse utilizando Angular como framework de front-end y SpringBoot para el back-end. Implementando OpenAI</em></h3>
+## ✨ Descripción
+Fake News es una aplicación web simple creada como experimento personal para explorar nuevas tecnologías y flujos de trabajo. Combina un backend en Spring Boot con integración de OpenAI y un frontend en Angular, usando Tailwind CSS y Signals para una experiencia moderna y reactiva.
 
-<p># Funcionalidad principal: Generar a traves de Spring Boot, con Chat GPT, un listado de noticias para luego ser consumido en una SPA de Angular.</p>
+La funcionalidad principal es generar un listado de noticias con ayuda de ChatGPT (vía OpenAI API) desde el backend, que luego es consumido por una Single Page Application construida en Angular.
 
-<p>Es una aplicación muy sencilla, con la cual quería trabajar un poco con algunas nuevas herramientas como Open AI como 
-dependencia en spring, despliegues con docker, y por el lado del front utilizando signals y Tawlind como gestor de estilos</p>
+## ⚙️ Tecnologías utilizadas
+🔧 Backend
+- Spring Boot 3
+- OpenAI API (ChatGPT)
+- Docker
 
-<br/>
+💻 Frontend
+- Angular 19
+- Tailwind CSS 4
+- Angular Signals
 
-<p>Repo front-end: <a href="https://github.com/amf-dev-gh/news-api-front">Fake news (ANGULAR)</a></p>
-<p>Repo back-end: <a href="https://github.com/amf-dev-gh/news-api-back">Fake News (SpringBoot)</a></p>
+## 🚀 Funcionalidades
+Generación automática de noticias mediante IA.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
+API REST construida con Spring Boot.
 
-<hr/>
+SPA en Angular para mostrar las noticias generadas.
 
-<p>Creador: Andres Mariano Fernández -> <a href="https://amf-dev.site/inicio">amf-dev.site</a></p>
-<p>Año: 2025</p>
+Despliegue con Docker.
+
+
+## 📁 Repositorios
+- 🔗 [Frontend - Angular](https://github.com/amf-dev-gh/news-api-front)
+- 🔗 [Backend - Spring Boot](https://github.com/amf-dev-gh/news-api-back)
+
+---
+
+### 🧑‍💻 Autor
+Andrés Mariano Fernández
+
+🖥 amf-dev.site
+
+Año: 2025
